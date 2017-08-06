@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Train Scheduler</title>
+
+		 <!-- jQuery -->
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ 		 <!-- Bootstrap CDN-->
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  		<!-- Firebase Reference -->
+  		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
+  		<!-- Link to Style Sheet -->
+		<link rel="stylesheet" href="assets/style.css">
+	</head>
+	<body>
+		<!-- Jumbtron BootStrap -->
+		<div class="container">
+			<div class="jumbotron text-center">
+				<h1>Train Schedule</h1>
+				<br></br>
+				<h2>Current Time: <span id="currentTime"></span></h2>
+		</div> <!-- Jumbtron End -->
+
+		<div class="row">
+			<div class="col-md-9">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Train Schedule</h3>
+					</div> <!-- panel-heading end -->
+					<div class="panel-body">
+						<table class="table table-hover table-responsive" id="trainTable">
+							<thead>
+								<tr>
+									<th>Train</th>
+									<th>Destination</th>
+									<th>Frequency</th>
+									<th>Arrival Time</th>
+									<th>Minutes Till Next Arrival</th>
+								</tr> <!-- tr end -->
+
+							</thead> <!-- thead end -->
+							
+							<tbody id="trainTable">
+								<br></br>
+							</tbody> <!-- tbody end -->
+
+						</table> <!-- table end -->
+
+					</div> <!-- panel-body end -->
+
+				</div> <!-- panel panel-primary end -->
+
+			</div> <!-- col-md-9 end -->
+
+			<div class="col-md-3">
+
+				<div class="panel panel-primary">
+
+					<div class="panel-heading">
+
+						<h3 class="panel-title">Train</h3>
+
+					</div> <!-- panel-heading end -->
+
+					<div class="panel-body">
+						
+						<form>
+							
+							<div class="form-group">
+								<label for="name">Train</label>
+								<input type="text" class="form-control" id="nameInput">
+							</div> <!-- form-group 1 end -->
+
+							<div class="form-group">
+								<label for="destination">Destination</label>
+								<input type="text" class="form-control" id="destinationInput">
+							</div> <!-- form-group 2 end -->
+
+							<div class="form-group">
+								<label for="nextTrain">Next Train</label>
+								<label class="time">&nbsp;(HH:mm)</label>
+								<input type="text" class="form-control" id="timeInput">
+							</div> <!-- form-group 3 end -->
+
+							<div class="form-group">
+								<label for="timeOut">Frequency: </label>
+								<input type="text" class="form-control" id="frequencyInput">
+							</div> <!-- form-group 4 end -->
+
+							<button type="submit" class="btn btn-default" id="submit">Add Train</button>
+
+							<button type="submit" class="btn btn-default" id="removeTrain">Remove Train</button>
+
+						</form> <!-- form end -->
+
+					</div> <!-- panel-body end -->
+
+				</div> <!-- panel panel-primary end -->
+
+			</div> <!-- col-md-3 end -->
+
+		</div> <!-- Row End -->
+
+		<!-- Link to Javascript Sheet -->
+		<script src="assets/app.js"></script> 
+
+		<!-- Moment.js -->
+  		<script src="assets/moment.js"></script>
+
+	</body>
+	
+</html>

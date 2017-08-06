@@ -1,0 +1,11 @@
+html, body {
+	background-image: url('TrainTracks.jpg');
+	text-decoration: bold;
+}
+
+.container {
+	opacity: 0.5;
+	text-decoration: bold;
+	font-family: "Times New Roman", Times, Serif;
+	
+}
